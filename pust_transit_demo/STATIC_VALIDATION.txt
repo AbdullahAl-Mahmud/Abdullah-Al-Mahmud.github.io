@@ -1,0 +1,18 @@
+PUST Transit static validation
+==============================
+
+Completed before packaging:
+- All relative Dart imports resolve to existing files.
+- Dart brackets, parentheses, strings, and block comments are balanced.
+- vercel.json and web/manifest.json parse as valid JSON.
+- pubspec.yaml, analysis_options.yaml, and GitHub Actions workflow parse as valid YAML.
+- vercel_build.sh passes bash syntax validation.
+- No TODO, FIXME, UnimplementedError, or placeholder implementation remains.
+
+Runtime verification commands:
+  flutter pub get
+  flutter analyze
+  flutter test
+  flutter build web --release
+
+The included GitHub Actions workflow runs all four checks on a Flutter-enabled runner.
